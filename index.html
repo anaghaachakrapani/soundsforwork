@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beautiful web application for playing ambient sounds while working. Features Classical, Lo-Fi Jazz, and Nature sounds.">
+    <meta name="theme-color" content="#7B3AFF">
+    <title>Sounds For Work</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <img src="img/bcg.png" alt="background" class="background-image">
+    <div class="overlay"></div>
+    <div id="timerDisplay" class="timer-display"></div>
+    <div class="title-container">
+        <h1 class="main-title">
+            <span class="sounds">Sounds</span>
+            <span class="for">For</span>
+            <span class="work">Work</span>
+        </h1>
+    </div>
+    <div class="image-row">
+        <img src="img/Frame 1.png" alt="Classical Music" class="category-image">
+        <img src="img/JAZZ.png" alt="Lo-Fi Jazz" class="category-image">
+        <img src="img/NAT.png" alt="Nature Sounds" class="category-image">
+    </div>
+
+    <div id="categoryName" class="category-name"></div>
+    <div class="audio-controls">
+        <div class="controls-row">
+            <div class="volume-container">
+                <div class="volume-controls">
+                    <span class="volume-title">Volume</span>
+                    <input type="range" id="volume-slider" min="0" max="100" value="50">
+                    <span id="volume-value">50%</span>
+                    <button id="playPauseBtn" class="play-state">Play</button>
+                </div>
+            </div>
+            <div class="timer-container">
+                <span class="volume-title">Timer</span>
+                <div class="timer-buttons">
+                    <button id="customBtn" class="custom-btn"><span>30 min</span></button>
+                    <button id="customBtn2" class="custom-btn"><span>1 hr</span></button>
+                    <button id="customBtn3" class="custom-btn"><span>Unlimited</span></button>
+                </div>
+            </div>
+            <div class="timer-container">
+                <span class="volume-title">Vibe</span>
+                <div class="timer-buttons">
+                    <button id="deadlineBtn" class="custom-btn"><span>Deadline</span></button>
+                    <button id="chillBtn" class="custom-btn"><span>Chill</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player">
+        <!-- Audio source will be set dynamically -->
+    </audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
